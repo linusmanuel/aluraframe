@@ -62,17 +62,11 @@
         </tfoot>
     </table>
     <script src="js/app/models/Negociacao.js"></script>
-        <script src="js/index.js"></script>
 
     <script>
-        let n1 = new Negociacao();
-        n1.quantidade = 10;
-
-        let n2 = new Negociacao();
-        n2.quantidade = 20;
-
-        console.log(n1)
-        console.log(n2)
+        let n1 = new Negociacao(new Date(), 10, 290);
+        const volume = n1.obtemValor(); 
+        console.log(volume);
     </script>
 </body>
 </html>
