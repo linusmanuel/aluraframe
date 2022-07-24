@@ -3,6 +3,7 @@ class Negociacao {
     this._date = data;
     this._quantidade = quantidade;
     this._valor = valor;
+    Object.freeze(this);
   }
 
   get valor() {
