@@ -90,9 +90,33 @@
             }
         }
 
+        class Pessoa {
+            constructor(name, lastname) {
+                this._name = name;
+                this._lastname = lastname;
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            get lastname() {
+                return this._lastname;
+            }
+
+            getLastname() {
+                let lastname = `${this._name} ${this._lastname}`;
+                return lastname;
+            }
+        }
+
         let calopsita = new Calopsita('Tapioca', 'calopsita do campo');
         console.log(calopsita.name);
         console.log(calopsita.raca);
+
+        let pessoa = new Pessoa('Joao', 'Manuel');
+        console.log(`Nome completo: ${pessoa.getLastname()}`);
+
     </script>
 </body>
 </html> 
