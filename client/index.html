@@ -110,6 +110,32 @@
             }
         }
 
+        class Conta {
+            constructor(titular, conta) {
+                this._titular = titular;
+                this._conta = conta;
+                this._saldo = 100;
+            }
+
+            get titular() {
+                return this._titular;
+            }
+
+            get conta() {
+                return this._conta;
+            }
+
+            get saldo() {
+                return this._saldo;
+            }
+
+            depositar(deposito) {
+                console.log(`Valor depositado: ${deposito}`)
+                this._saldo += deposito;
+
+            }
+        }
+
         let calopsita = new Calopsita('Tapioca', 'calopsita do campo');
         console.log(calopsita.name);
         console.log(calopsita.raca);
@@ -117,6 +143,9 @@
         let pessoa = new Pessoa('Joao', 'Manuel');
         console.log(`Nome completo: ${pessoa.getLastname()}`);
 
+        let conta = new Conta('Joao Lino', '123245');
+        conta.depositar(450);
+        console.log(conta.saldo)
     </script>
 </body>
 </html> 
